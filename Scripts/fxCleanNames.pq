@@ -12,13 +12,14 @@ let func =
         combineText
         
 , documentation = [
-Documentation.Name =  " Table.BlendDataTableau
-", Documentation.Description = " Blends table data like in Tableau.
-" , Documentation.LongDescription = " Blends table data like in Tableau. See: http://www.thebiccountant.com/2017/02/23/blending-data-in-powerbi-like-in-tableau/
+Documentation.Name =  " fxCleanNames
+", Documentation.Description = " Performs regular cleaning functions on first and last names.
+" , Documentation.LongDescription = " Performs regular cleaning functions on first and last names.
 ", Documentation.Category = " Table
-", Documentation.Source = " http://www.thebiccountant.com/2017/02/23/blending-data-in-powerbi-like-in-tableau/
-", Documentation.Author = " Imke Feldmann: www.TheBIccountant.com .
-", Documentation.Examples = {[Description =  " http://www.thebiccountant.com/2017/02/23/blending-data-in-powerbi-like-in-tableau/
+", Documentation.Source = " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
+", Documentation.Author = " Dimitris Mandiliotis.
+", Documentation.Author = " Dimitris Mandiliotis.
+", Documentation.Example = {[Description =  " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
 " , Code = " 
  ", Result = " 
 "]}] 
