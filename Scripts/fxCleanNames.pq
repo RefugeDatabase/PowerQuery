@@ -18,7 +18,7 @@ Documentation.Name =  " fxCleanNames
 ", Documentation.Category = " Table
 ", Documentation.Source = " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
 ", Documentation.Author = " Dimitris Mandiliotis.
-", Documentation.Author = " Dimitris Mandiliotis.
+", Documentation.Version = " v1.00.
 ", Documentation.Example = {[Description =  " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
 " , Code = " 
  ", Result = " 
