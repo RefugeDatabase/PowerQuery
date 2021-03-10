@@ -1,5 +1,5 @@
 let func =
-    (inputText as text) =>
+    (inputText as text) as text =>
     let
         toRemove = {""""} & Text.ToList(":{}[]"), // Listing characters to remove
         cleanText = Text.Remove( inputText, toRemove), // Removing unwanted characters
