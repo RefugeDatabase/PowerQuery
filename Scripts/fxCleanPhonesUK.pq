@@ -27,8 +27,8 @@ let func =
         
 , documentation = [
 Documentation.Name =  " fxCleanPhonesUK
-" , Documentation.LongDescription = " Performs regular cleaning functions on UK phone numbers to transform to format 0_XXXXXXXXX, where _ = 1, 2 or 7. Source: https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
-", Documentation.Source = " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
+" , Documentation.LongDescription = " Performs regular cleaning functions on UK phone numbers to transform to format 0_XXXXXXXXX, where _ = 1, 2 or 7. Source: https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanPhonesUK.pq
+", Documentation.Source = " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanPhonesUK.pq
 ",
 Documentation.Examples = {[
     Description = "Removes UK country code, removes special characters, removes spaces, adds leading zero",
