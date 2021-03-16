@@ -5,7 +5,8 @@ let func =
         cleanText = Text.Remove( inputText, toRemove), // Removing unwanted characters
         trimText = Text.Trim( cleanText ), // Trim
         replaceText = Text.Replace(trimText, "â€™", "'"), // Replace set of characters
-        splitText = Text.Split(replaceText, "-"), // Double-barrelled surnames split
+        replaceText2 = Text.Replace(replaceText, "Ã©", "e"),
+        splitText = Text.Split(replaceText2, "-"), // Double-barrelled surnames split
         properTextList = List.Transform(splitText, each Text.Proper(_)), // Proper each separate name before combining again
         combineText = Text.Combine(properTextList, "-")
     in
