@@ -28,7 +28,7 @@ let
         
 , documentation = [
 Documentation.Name =  " fxCleanScottishSurnames
-" , Documentation.LongDescription = " Performs cleaning of surnames beginning with ""Mc"" or ""Mac"" capitalising the next letter. The function should always follow normal proper casing functions in order to maintain the capitalisation. Source: https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
+" , Documentation.LongDescription = " Performs cleaning of surnames beginning with ""Mc"" or ""Mac"" capitalising the next letter. The function should always follow normal proper casing functions in order to maintain the capitalisation. Source: https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanScottishSurnames.pq
 ", Documentation.Source = " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanScottishSurnames.pq
 ",
 Documentation.Examples = {[
