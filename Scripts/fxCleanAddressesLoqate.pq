@@ -1,9 +1,9 @@
 // Function calling Loqate API to return clean addresses. API documentation: https://www.loqate.com/resources/support/cleanse-api/international-batch-cleanse/
 
 let func =
-    (InputTable as table) as table =>
+    (Key as table, Address as table) as table =>
     let
-        #"Renamed to Addresses" = Table.RenameColumns(InputTable,{{"LoqatePrepare", "Addresses"}}),
+        AddAddressData = Table.AddColumn(Key, "Addresses", each Address),
         // Creating Json File
         InitialJson = Json.FromValue(#"Renamed to Addresses"),
         // Converting Json to Text in order to fix Json formatting. Loqate expects addresses and arguements in JSON objects, while PQ transforms tables to array of objects.
