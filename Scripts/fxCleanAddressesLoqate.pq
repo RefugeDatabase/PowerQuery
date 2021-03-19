@@ -5,7 +5,7 @@ let func =
     let
         AddAddressData = Table.AddColumn(Key, "Addresses", each Address),
         // Creating Json File
-        InitialJson = Json.FromValue(#"Renamed to Addresses"),
+        InitialJson = Json.FromValue(AddAddressData),
         // Converting Json to Text in order to fix Json formatting. Loqate expects addresses and arguements in JSON objects, while PQ transforms tables to array of objects.
         InitialJsonText = Text.FromBinary(InitialJson),
         FinalJsonText = Text.Insert(Text.Middle(InitialJsonText,1,Text.Length(InitialJsonText)-2),Text.Length(InitialJsonText)-3,","&
