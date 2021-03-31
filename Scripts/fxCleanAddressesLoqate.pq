@@ -38,7 +38,8 @@ let func = (Key as table, Addresses as table) as table =>
             #"Removed Other Columns" = Table.SelectColumns(#"Reordered Columns1",{"ID", "AQI", "AVC", "DeliveryAddress1", "DeliveryAddress2", "DeliveryAddress3", "Locality", "PostalCode", "CountryName"})
         in
             #"Removed Other Columns",
-        AddressesSplit = Table.Split(Addresses,1),
+        // Number on Table.Split function determines how many address records should be passed on to Loqate per each API call.
+        AddressesSplit = Table.Split(Addresses,10),
         ListGen = List.Generate(
             ()=>[Counter = 0],
             each [Counter]<List.Count(AddressesSplit),
