@@ -39,7 +39,7 @@ let func = (Key as table, Addresses as table) as table =>
         in
             #"Removed Other Columns",
         // Number on Table.Split function determines how many address records should be passed on to Loqate per each API call.
-        AddressesSplit = Table.Split(Addresses,10),
+        AddressesSplit = Table.Split(Addresses,500),
         ListGen = List.Generate(
             ()=>[Counter = 0],
             each [Counter]<List.Count(AddressesSplit),
