@@ -46,9 +46,10 @@ let func = (Key as table, Addresses as table) as table =>
             each [Counter=[Counter]+1],
             each funcLoqate(Key, AddressesSplit{[Counter]})
         ),
-        AddressesFinal = Table.Combine(ListGen)
+        AddressesFinal = Table.Combine(ListGen),
+        DedupAddresses = Table.Distinct(AddressesFinal, "ID")
     in
-        AddressesFinal
+        DedupAddresses
 , documentation = [
 Documentation.Name =  " fxCleanAddressesLoqate
 " , Documentation.LongDescription = " Performs address cleaning by calling Loqate API. Cost 1.2p per address cleaned. The function receives a table as an arguement with format:
