@@ -13,7 +13,9 @@ let func = (Key as table, Addresses as table) as table =>
     let
         funcLoqate = (Key as table, Addresses as table) as table =>
         let 
-            AddAddressData = Table.AddColumn(Key, "Addresses", each Addresses),
+            // Adds blank row of data if table is empty so Loqate returns empty table with correct headers. Function does not work if Loqate returns non address data
+            AddBlankLineIfEmpty = if Table.IsEmpty(Addresses) then Table.InsertRows(Addresses, 0,{Record.FromList(List.Repeat({""},Table.ColumnCount(Addresses)),Table.ColumnNames(Addresses))}) else Addresses,
+            AddAddressData = Table.AddColumn(Key, "Addresses", each AddBlankLineIfEmpty),
             // Creating Json File
             InitialJson = Json.FromValue(AddAddressData),
             // Converting Json to Text in order to fix Json formatting. Loqate expects addresses and arguements in JSON objects, while PQ transforms tables to array of objects.
