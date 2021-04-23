@@ -49,7 +49,8 @@ let func = (Key as table, Addresses as table) as table =>
             each funcLoqate(Key, AddressesSplit{[Counter]})
         ),
         AddressesFinal = Table.Combine(ListGen),
-        DedupAddresses = Table.Distinct(AddressesFinal, "ID")
+        CheckForEmpty = if Table.IsEmpty(AddressesFinal) then #table({"ID", "AQI", "AVC", "DeliveryAddress1", "DeliveryAddress2", "DeliveryAddress3", "Locality", "PostalCode", "CountryName"}, {}) else AddressesFinal,
+        DedupAddresses = Table.Distinct(CheckForEmpty, "ID")
     in
         DedupAddresses
 , documentation = [
