@@ -17,8 +17,8 @@ let
         FiscalYear
         
 , documentation = [
-Documentation.Name =  " fxVerifyEmail
-" , Documentation.LongDescription = " Verifies email address. If invalid, replaces with the value ""Invalid"" Source: https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
+Documentation.Name =  " fxAddFinancialYear
+" , Documentation.LongDescription = " Adds financial year in form of YY/YY to be used for auto-coding campaign income. Source: https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
 ", Documentation.Source = " https://raw.githubusercontent.com/RefugeDatabase/PowerQuery/main/Scripts/fxCleanNames.pq
 "] 
  in 
